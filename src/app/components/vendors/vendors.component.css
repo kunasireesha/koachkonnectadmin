@@ -1,0 +1,34 @@
+.add-vendor-btn{
+    margin-top: 20px;
+    background-color: #08508f;
+}
+.add-vendor-btn:hover{
+    background-color: #08508f;
+}
+
+.form-group input{
+    border-radius: 5px;
+}
+.vendor-delete{
+    margin-left: 15px;
+}
+.fa-pencil, .fa-trash-o{
+    padding-right:20px;
+    font-size: 18px;
+    color: #000;
+}
+input[type=text] {
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    font-size: 17px;
+    border: solid 1px #eaeaea;
+    border-radius: 5px;
+    width: 30%;
+  }
+  .fa-search{
+    position: absolute;
+    top: 17%;
+    left: 26%;
+  }

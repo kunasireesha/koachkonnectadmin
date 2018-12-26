@@ -1,0 +1,318 @@
+<div class="container-scroller">
+  <!-- partial:partials/_navbar.html -->
+  
+  <logo-nav></logo-nav>
+  
+  <!-- partial -->
+  <div class="container-fluid page-body-wrapper">
+    <div class="row row-offcanvas row-offcanvas-right">
+      <!-- partial:partials/_settings-panel.html -->
+      <header-nav></header-nav>
+      <profile-nav></profile-nav>
+      
+      <!-- partial -->
+      <!-- partial:partials/_sidebar.html -->
+      
+      <!-- partial -->
+      <div class="content-wrapper">
+        <div class="card">
+          <div class="card-body">
+            <a routerLink="/addcategory" id="show" class="btn  btn-maron" style="float: right">Add User</a>
+            <a routerLink="/addcategory" id="show" class="btn  btn-maron" style="float: right">Export to excel</a>
+            <h4 class="card-title">Users Management</h4>
+            <span><input type="text" placeholder="Search.."><i class="fa fa-search" aria-hidden="true"></i></span>
+            <br/>
+            <div class="row">
+              <div class="col-12">
+                <div class="table-responsive">
+                  <table id="order-listing" class="table " style="text-align: center">
+                    <thead class="thead-dark">
+                      <tr class="todo-list">
+                        <th>User Name<span><i class="fa fa-sort" aria-hidden="true"></i></span></th>
+                        <th>First Name</th>
+                        <th>Last name</th>
+                        <th>Mobile Number<span><i class="fa fa-sort" aria-hidden="true"></i></span></th>
+                        <th>Email Id<span><i class="fa fa-sort" aria-hidden="true"></i></span></th>
+                        <th>Role<span><i class="fa fa-sort" aria-hidden="true"></i></span></th>
+                        <th>Date of creation</th>
+                        <th>Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="todo-list">
+                        <td>Smruthi</td>
+                        <td>Smruthi</td>
+                        <td>adda</td>
+                        <td>66666</td>
+                        <td>srikanth@gmail.com</td>
+                        <td>Student</td>
+                        <td>21-8-2018</td>
+                        <td>
+                            <a routerLink="/addcategory"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                            <a (click)="delete()"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                          </td>
+                      </tr>
+                      <tr class="todo-list">
+                        <td>Smruthi</td>
+                        <td>Smruthi</td>
+                        <td>adda</td>
+                        <td>66666</td>
+                        <td>siva@gmail.com</td>
+                        <td>Student</td>
+                        <td>21-8-2018</td>
+                        <td>
+                            <a routerLink="/addcategory"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                            <a (click)="delete()"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                          </td>
+                      </tr>
+                      <tr class="todo-list">
+                        <td>Smruthi</td>
+                        <td>Smruthi</td>
+                        <td>adda</td>
+                        <td>66666</td>
+                        <td>teju@gmail.com</td>
+                        <td>Student</td>
+                        <td>21-8-2018</td>
+                      <td>
+                          <a routerLink="/addcategory"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                          <a (click)="delete()"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                        </td>
+                      </tr>
+                      <tr class="todo-list">
+                        <td>Smruthi</td>
+                        <td>Smruthi</td>
+                        <td>adda</td>
+                        <td>66666</td>
+                        <td>sruthi@gmail.com</td>
+                        <td>Student</td>
+                        <td>21-8-2018</td>
+                      <td>
+                          <a routerLink="/addcategory"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                          <a (click)="delete()"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                        </td>
+                      </tr>
+                      <tr class="todo-list">
+                        <td>Smruthi</td>
+                        <td>Smruthi</td>
+                        <td>adda</td>
+                        <td>66666</td>
+                        <td>Eswar@gmail.com</td>
+                        <td>Student</td>
+                        <td>21-8-2018</td>
+                      <td>
+                          <a routerLink="/addcategory"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                          <a (click)="delete()"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                        </td>
+                      </tr>
+                      <tr class="todo-list">
+                        <td>Smruthi</td>
+                        <td>Smruthi</td>
+                        <td>adda</td>
+                        <td>66666</td>
+                        <td>srija@gmail.com</td>
+                        <td>Student</td>
+                        <td>21-8-2018</td>
+                      <td>
+                          <a routerLink="/addcategory"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                          <a (click)="delete()"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                        </td>
+                      </tr>
+                      <tr class="todo-list">
+                        <td>Smruthi</td>
+                        <td>Smruthi</td>
+                        <td>adda</td>
+                        <td>66666</td>
+                        <td>siri@gmail.com</td>
+                        <td>Student</td>
+                        <td>21-8-2018</td>
+                      <td>
+                          <a routerLink="/addcategory"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                          <a (click)="delete()"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                        </td>
+                      </tr>
+                      <tr class="todo-list">
+                        <td>Smruthi</td>
+                        <td>Smruthi</td>
+                        <td>adda</td>
+                        <td>66666</td>
+                        <td>venkat@gmail.com</td>
+                        <td>Student</td>
+                        <td>21-8-2018</td>
+                      <td>
+                          <a routerLink="/addcategory"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                          <a (click)="delete()"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                        </td>
+                      </tr>
+                      <tr class="todo-list">
+                        <td>Smruthi</td>
+                        <td>Smruthi</td>
+                        <td>adda</td>
+                        <td>66666</td>
+                        <td>Divya@gmail.com</td>
+                        <td>Student</td>
+                        <td>21-8-2018</td>
+                      <td>
+                          <a routerLink="/addcategory"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                          <a (click)="delete()"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                        </td>
+                      </tr>
+                      <tr class="todo-list">
+                        <td>Smruthi</td>
+                        <td>Smruthi</td>
+                        <td>adda</td>
+                        <td>66666</td>
+                        <td>Tejaswi@gmail.com</td>
+                        <td>Student</td>
+                        <td>21-8-2018</td>
+                        <td>
+                            <a routerLink="/addcategory"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                            <a (click)="delete()"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                          </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="content-wrapper">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Calender</h4>
+            <ul class="nav nav-tabs">
+              <li class="active"><a data-toggle="tab" href="#home">Weakly Time Table</a></li>
+              
+            </ul>
+            <div class="tab-content">
+              <div id="home" class="tab-pane fade in active">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th><i class="fa fa-clock-o" aria-hidden="true" style="font-size:20px;"></i></th>
+                      <th>Mon</th>
+                      <th>Tue</th>
+                      <th>Wed</th>
+                      <th>Thu</th>
+                      <th>Fri</th>
+                      <th>Sat</th>
+                      <th>Sun</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>9.00</td>
+                      <td>Mathematics</td>
+                      <td>...</td>
+                      <td>...</td>
+                      <td>...</td>
+                      <td>...</td>
+                      <td>...</td>
+                      <td>Chemistry</td>
+                    </tr>
+                    <tr>
+                      <td>10.00</td>
+                      <td>...</td>
+                      <td>...</td>
+                      <td>Physics</td>
+                      <td>...</td>
+                      <td>English</td>
+                      <td>...</td>
+                      <td>...</td>
+                    </tr>
+                    <tr>
+                      <td>11.00</td>
+                      <td>...</td>
+                      <td>Telugu</td>
+                      <td>...</td>
+                      <td>...</td>
+                      <td>Geology</td>
+                      <td>...</td>
+                      <td>...</td>
+                    </tr>
+                    
+                    <tr>
+                      <td>1.00</td>
+                      <td>Mathematics</td>
+                      <td>...</td>
+                      <td>...</td>
+                      <td>...</td>
+                      <td>...</td>
+                      <td>...</td>
+                      <td>Chemistry</td>
+                    </tr>
+                    <tr>
+                      <td>1.00</td>
+                      <td>...</td>
+                      <td>...</td>
+                      <td>Telugu</td>
+                      <td>...</td>
+                      <td>...</td>
+                      <td>...</td>
+                      <td>English</td>
+                    </tr>
+                    <tr>
+                      <td>2.00</td>
+                      <td>...</td>
+                      <td>Chemistry</td>
+                      <td>...</td>
+                      <td>...</td>
+                      <td>Physics</td>
+                      <td>...</td>
+                      <td>...</td>
+                    </tr>
+                    <tr>
+                      <td>3.00</td>
+                      <td>Mathematics</td>
+                      <td>...</td>
+                      <td>...</td>
+                      <td>...</td>
+                      <td>...</td>
+                      <td>...</td>
+                      <td>Chemistry</td>
+                    </tr>
+                    <tr>
+                      <td>1.00</td>
+                      <td>...</td>
+                      <td>...</td>
+                      <td>...</td>
+                      <td>English</td>
+                      <td>...</td>
+                      <td>...</td>
+                      <td>Biology</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div id="menu1" class="tab-pane fade">
+                
+              </div>
+              <div id="menu2" class="tab-pane fade">
+                <h3>Menu 2</h3>
+                <p>Some content in menu 2.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+      <!-- content-wrapper ends -->
+      <!-- partial:partials/_footer.html -->
+      <footer class="footer">
+        <div class="container-fluid clearfix">
+          <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © 2018
+            <a routerLink="#">koachkonnect </a>. All rights reserved. </span>
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">
+              
+            </span>
+          </div>
+        </footer>
+        <!-- partial -->
+      </div>
+      <!-- row-offcanvas ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  
+  <script src="../../assets/admin-scripts/bootstrap/dist/js/bootstrap.min.js"></script>
+  
