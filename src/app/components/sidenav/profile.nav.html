@@ -9,15 +9,15 @@
         <div class="profile-image">
           <div class="row">
             <div class="col-md-6">
-                <img class="text-center" src="assets/images/logo.png">
+              <img class="text-center" src="assets/images/logo.png">
             </div>
           </div>
           <!-- <span> Michel</span> -->
         </div>
       </div>
     </li>
-    <li class="nav-item" [ngClass]="{'active':pageNav==='categorie' || pageNav=== 'addcategorie'}">
-      <a class="nav-link" routerLink="/category">
+    <li class="nav-item" [ngClass]="{'active':pageNav==='users' || pageNav=== 'addusers'}">
+      <a class="nav-link" routerLink="/users">
         <i class="fa fa-users" aria-hidden="true"></i>
         <span class="menu-title">Users</span>
       </a>
@@ -29,7 +29,7 @@
         <span class="menu-title">Coachee</span>
       </a>
     </li>
-   <li class="nav-item" [ngClass]="{'active':pageNav==='vendors' || pageNav==='addvendors'}">
+    <li class="nav-item" [ngClass]="{'active':pageNav==='vendors' || pageNav==='addvendors'}">
       <a class="nav-link" routerLink="/vendors">
         <i class="fa fa-book" aria-hidden="true"></i>
         <span class="menu-title">Role Management</span>
@@ -42,19 +42,25 @@
       </a>
     </li>
     <li class="nav-item" [ngClass]="{'active':pageNav==='wholesellers' || pageNav==='addwholesellers'}">
-        <a class="nav-link" routerLink="/wholesellers">
-          <i class="fa fa-history" aria-hidden="true"></i>
-          <span class="menu-title">Booking History</span>
-        </a>
-      </li> 
-<!--     
+      <a class="nav-link" routerLink="/wholesellers">
+        <i class="fa fa-history" aria-hidden="true"></i>
+        <span class="menu-title">Booking History</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" (click)="logout()">
+        <i class="fa fa-sign-out" aria-hidden="true"></i>
+        <span class="menu-title">Logout</span>
+      </a>
+    </li>
+    <!--     
     <li class="nav-item" [ngClass]="{'active':pageNav==='users' || pageNav==='addusers'}">
       <a class="nav-link" routerLink="/users">
         <i class="icon-people menu-icon"></i>
         <span class="menu-title">User List </span>
       </a>
     </li> -->
-<!-- 
+    <!-- 
     <li class="nav-item" [ngClass]="{'active':pageNav==='wholesellers' || pageNav==='addwholesellers'}">
       <a class="nav-link" routerLink="/wholesellers">
         <i class="icon-people menu-icon"></i>
@@ -67,7 +73,7 @@
         <span class="menu-title">Orders </span>
       </a>
     </li> -->
-<!-- 
+    <!-- 
     <li class="nav-item">
       <a class="nav-link" routerLink="/">
         <i class="icon-power menu-icon"></i>

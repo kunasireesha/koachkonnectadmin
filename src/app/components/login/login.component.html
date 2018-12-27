@@ -1,23 +1,32 @@
-
 <section class="login-block">
   <div class="container">
     <div class="row">
       <div class="col-md-4 login-sec">
         <h2 class="text-center">Login Now</h2>
-        <form class="login-form">
+        <form class="login-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
           <div class="form-group">
-            <label for="exampleInputEmail1" class="text-uppercase">Username</label>
-            <input type="text" class="form-control" placeholder="">
-            
+            <label for="exampleInputEmail1" class="text-uppercase">PHONE</label>
+
+            <input type="text" class="form-control" placeholder="" maxlength="10" formControlName="phone" [ngClass]="{ 'is-invalid':submitted&& f.phone.errors }">
+
+            <div *ngIf=" submitted && f.phone.errors" class="invalid-feedback">
+              <div *ngIf=" submitted && f.phone.errors.required">Phone is required</div>
+            </div>
+
           </div>
           <div class="form-group">
             <label for="exampleInputPassword1" class="text-uppercase">Password</label>
-            <input type="password" class="form-control" placeholder="">
-          </div>   
+            <input type="password" class="form-control" placeholder="" formControlName="password" [ngClass]="{ 'is-invalid': submitted&& f.password.errors }">
+            <div *ngIf="submitted&&f.password.errors" class="invalid-feedback">
+              <div *ngIf="submitted&&f.password.errors.required">Password is required</div>
+            </div>
+          </div>
           <div class="form-check">
-            <input class="login_checkbox" type="checkbox" name="vehicle1" value="Bike"><span style="margin-left:7px">Remember me</span><br>
-           <a routerLink="/category" routerLinkActive="active"><button type="submit" class="btn btn-login float-right">Submit</button></a>
-          </div>        
+            <input class="login_checkbox" type="checkbox" name="vehicle1" value="Bike"><span style="margin-left:7px">Remember
+              me</span><br>
+
+            <button type="submit" class="btn btn-login float-right">Submit</button>
+          </div>
         </form>
       </div>
       <div class="col-md-8 banner-sec">
@@ -32,10 +41,10 @@
               <img class="d-block img-fluid" src="https://static.pexels.com/photos/33972/pexels-photo.jpg" alt="First slide">
               <div class="carousel-caption d-none d-md-block">
                 <div class="banner-text">
-                </div>	
+                </div>
               </div>
             </div>
-          </div>	          
+          </div>
         </div>
       </div>
     </div>

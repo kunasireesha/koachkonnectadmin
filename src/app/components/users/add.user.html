@@ -1,6 +1,5 @@
 <div class="container-scroller">
   <!-- partial:partials/_navbar.html -->
-
   <logo-nav></logo-nav>
   <!-- partial -->
   <div class="container-fluid page-body-wrapper">
@@ -17,46 +16,79 @@
           <div class="col-lg-12">
             <div class="card">
               <div class="card-body">
-                <h4 class="card-title">Add User </h4>
+                <h4 class="card-title text-center">Add User</h4>
                 <a routerLink="/users" id="show" class="btn  btn-maron" style="float: right;    margin-top: -45px;">Back</a>
-
-                <form class="cmxform" id="signupForm" method="get" action="#">
-                  <fieldset>
-
-                    <div class="form-group">
-                      <label for="firstname">First Name :</label>
-                      <input id="category" class="form-control" name="category" type="text" />
+                <form [formGroup]="adduserForm" (ngSubmit)="addUser()">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">User Name</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                      formControlName="user_name" [ngClass]="{ 'is-invalid':submitted&& f.user_name.errors }">
+                    <div *ngIf=" submitted && f.user_name.errors" class="invalid-feedback">
+                      <div *ngIf=" submitted && f.user_name.errors.required">UserName is required</div>
                     </div>
-                    <div class="form-group">
-                      <label for="firstname">Last Name :</label>
-                      <input id="category" class="form-control" name="category" type="text" />
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">First Name</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                      formControlName="first_name" [ngClass]="{ 'is-invalid':submitted&& f.first_name.errors }">
+                    <div *ngIf=" submitted && f.first_name.errors" class="invalid-feedback">
+                      <div *ngIf=" submitted && f.first_name.errors.required">Firstname is required</div>
                     </div>
-                    <div class="form-group">
-                      <label for="firstname">Phone num :</label>
-                      <input id="category" class="form-control" name="category" type="text" />
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Last Name</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                      formControlName="last_name" [ngClass]="{ 'is-invalid':submitted&& f.last_name.errors }">
+                    <div *ngIf=" submitted && f.last_name.errors" class="invalid-feedback">
+                      <div *ngIf=" submitted && f.last_name.errors.required">Lastname is required</div>
                     </div>
-                    <div class="form-group">
-                      <label for="firstname">Email :</label>
-                      <input id="category" class="form-control" name="category" type="text" />
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Mobile Number</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                      formControlName="phone" [ngClass]="{ 'is-invalid':submitted&& f.phone.errors }">
+                    <div *ngIf=" submitted && f.phone.errors" class="invalid-feedback">
+                      <div *ngIf=" submitted && f.phone.errors.required">Mobile is required</div>
                     </div>
-                    <input class="btn btn-primary" type="submit" value="Add User" />
-                  </fieldset>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Email ID</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                      formControlName="email" [ngClass]="{ 'is-invalid':submitted&& f.email.errors }">
+                    <div *ngIf=" submitted && f.email.errors" class="invalid-feedback">
+                      <div *ngIf=" submitted && f.email.errors.required">Email is required</div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Role</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                      formControlName="role" [ngClass]="{ 'is-invalid':submitted&& f.role.errors }">
+                    <div *ngIf=" submitted && f.role.errors" class="invalid-feedback">
+                      <div *ngIf=" submitted && f.role.errors.required">Role is required</div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Password</label>
+                    <input type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                      formControlName="password" [ngClass]="{ 'is-invalid':submitted&& f.password.errors }">
+                    <div *ngIf=" submitted && f.password.errors" class="invalid-feedback">
+                      <div *ngIf=" submitted && f.password.errors.required">Password is required</div>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-primary vendor-button">Add User</button>
                 </form>
               </div>
             </div>
           </div>
         </div>
-
-
       </div>
       <!-- content-wrapper ends -->
       <!-- partial:partials/_footer.html -->
       <footer class="footer">
         <div class="container-fluid clearfix">
           <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © 2018
-            <a routerLink="#">Koachkonnect</a>. All rights reserved. </span>
+            <a routerLink="#">Koachkonnect </a>. All rights reserved. </span>
           <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">
-            
           </span>
         </div>
       </footer>

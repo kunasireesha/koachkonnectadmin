@@ -2,6 +2,9 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { HttpModule } from '@angular/http';
+import { ToastrModule } from 'ng6-toastr-notifications';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import swal from 'sweetalert'
 // import { routing } from './app.routing';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
@@ -48,6 +51,8 @@ import { FormsModule } from '@angular/forms';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 
+//services
+import { MainService } from './services/main';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
@@ -75,15 +80,18 @@ export function HttpLoaderFactory(http: HttpClient) {
     AddVendorsComponent,
     OrdersComponent,
     VendorManagementComponent,
-    
+
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
+    HttpModule,
     Ng2SearchPipeModule,
+    BrowserAnimationsModule,
     TooltipModule.forRoot(),
+    ToastrModule.forRoot(),
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -111,8 +119,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     ], { useHash: true })
   ],
   schemas: [NO_ERRORS_SCHEMA],
-  providers: [
-  ],
+  providers: [MainService],
   bootstrap: [AppComponent],
   entryComponents: [],
   exports: [BrowserModule, TranslateModule]
