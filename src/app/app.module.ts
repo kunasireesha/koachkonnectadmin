@@ -5,7 +5,8 @@ import { RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
 import { ToastrModule } from 'ng6-toastr-notifications';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import swal from 'sweetalert'
+import swal from 'sweetalert';
+import { Ng2OrderModule } from 'ng2-order-pipe';
 // import { routing } from './app.routing';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
@@ -91,6 +92,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     Ng2SearchPipeModule,
     BrowserAnimationsModule,
     TooltipModule.forRoot(),
+    Ng2OrderModule,
     ToastrModule.forRoot(),
     TranslateModule.forRoot({
       loader: {
@@ -103,13 +105,13 @@ export function HttpLoaderFactory(http: HttpClient) {
       { path: '', component: LoginComponent },
       { path: 'forgotpassword', component: ForgotPasswordComponent },
       { path: 'category', component: CategoriesComponent, data: [{ page: 'categorie' }] },
-      { path: 'addcategory', component: AddCatComponent, data: [{ page: 'addcategorie' }] },
+      { path: 'addcategory/:id', component: AddCatComponent, data: [{ page: 'addcategorie' }] },
       { path: 'subcategory', component: SubCatComponent, data: [{ page: 'subcategorie' }] },
       { path: 'addsubcategory', component: AddSubCatComponent, data: [{ page: 'addsubcategorie' }] },
       { path: 'prducts', component: ProductsComponent, data: [{ page: 'products' }] },
       { path: 'addprducts', component: AddProductsComponent, data: [{ page: 'addproducts' }] },
       { path: 'users', component: UsersComponent, data: [{ page: 'users' }] },
-      { path: 'addusers', component: AddUsersComponent, data: [{ page: 'addusers' }] },
+      { path: 'addusers/:id', component: AddUsersComponent, data: [{ page: 'addusers' }] },
       { path: 'wholesellers', component: WholesellersComponent, data: [{ page: 'wholesellers' }] },
       { path: 'addwholesellers', component: AddWholesellersComponent, data: [{ page: 'addwholesellers' }] },
       { path: 'vendors', component: VendorsComponent, data: [{ page: 'vendors' }] },

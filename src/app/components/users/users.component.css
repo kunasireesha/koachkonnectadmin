@@ -26,9 +26,11 @@ input[type=text] {
 
 .fa-search {
   position: absolute;
-  top: 17%;
-  left: 26%;
+  top: 26%;
+  left: 28%;
 }
+
+
 
 .nav-tabs li {
   padding-right: 20px;
