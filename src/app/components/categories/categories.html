@@ -30,6 +30,7 @@
                   <table id="order-listing" class="table " style="text-align: center">
                     <thead class="thead-dark">
                       <tr class="todo-list">
+                        <th>S no.</th>
                         <th>Category Name<span><i class="fa fa-sort" aria-hidden="true"></i></span></th>
                         <th>Num of Coaches</th>
                         <th>Status</th>
@@ -41,11 +42,12 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr class="todo-list" *ngFor="let data of catData">
+                      <tr class="todo-list" *ngFor="let data of catData;let i = index">
+                        <td>{{i+1}}</td>
                         <td>{{data.category_name}}</td>
-                        <td>{{no_of_coaches}}</td>
-                        <td>{{status}}</td>
-                        <td>{{created_on}}</td>
+                        <td>{{data.no_of_coaches}}</td>
+                        <td>{{data.status}}</td>
+                        <td>{{data.created_on}}</td>
                         <!-- <td>srikanth@gmail.com</td>
                         <td>Student</td>
                         <td>21-8-2018</td> -->
